@@ -15,6 +15,11 @@ namespace EFExample
             Countries = new HashSet<Country>();
         }
 
+        public override string ToString()
+        {
+            return $"{this.Id} {this.Name1} {this.SecName} {this.Age}";
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 

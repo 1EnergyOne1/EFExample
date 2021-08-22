@@ -25,14 +25,22 @@ namespace EFExample
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Вывод данных из бд в диалоговое окно
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSelectName(object sender, RoutedEventArgs e)
         {
-            using (City context = new City())
+            using (City context = new City()) 
             {                
                foreach (Name c in context.Names)
                 {
-                    MessageBox.Show($"{c}");
+                    MessageBox.Show($"{c}"); // 
                 }
+
+                
             }
         }
     }
