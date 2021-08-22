@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Имя:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,-4.615"/>
-        <Button Content="Получить данные" HorizontalAlignment="Left" Margin="380,170,0,0" VerticalAlignment="Top" Width="155" Click="BtnSelectName"/>
+        <Label Name="LAbel" Content="Имя:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,-4.615"/>
+        <Button Content="Получить данные" HorizontalAlignment="Left" Margin="525,235,0,0" VerticalAlignment="Top" Width="155" Click="BtnSelectName"/>
         <Label Name="LabelText" Content="" HorizontalAlignment="Left" Margin="90,190,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="Grid1" HorizontalAlignment="Left" Height="285" Margin="30,80,0,0" VerticalAlignment="Top" Width="365" AutoGenerateColumns="True"/>
+        <TextBox Name="TExtes" HorizontalAlignment="Left" Height="65" Margin="490,60,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="175"/>
 
     </Grid>
 </Window>

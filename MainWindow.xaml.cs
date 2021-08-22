@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,13 +35,10 @@ namespace EFExample
         private void BtnSelectName(object sender, RoutedEventArgs e)
         {
             using (City context = new City()) 
-            {                
-               foreach (Name c in context.Names)
-                {
-                    MessageBox.Show($"{c}"); // 
-                }
+            {
+                var kk = context.Names.ToList();       // Помещаем все данные из БД таблицы Names в список
 
-                
+                Grid1.ItemsSource = kk;                // Вывод данных в DataGrid
             }
         }
     }
